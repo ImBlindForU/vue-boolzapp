@@ -8,12 +8,23 @@
 img{
     max-width: 100%;
 }
+
+i{
+    font-size: 2rem;
+    color: #b1b1b1;
+}
+
+.fixed{
+    display: fixed;
+    top: 0;
+    left: 0;
+}
 /* container */
 
 .background-container{
     width: 100vw;
     height: 100vh;
-    background-color: lightblue;
+    background-color: lightgreen;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,20 +34,19 @@ img{
     width: 80vw;
     height: 90vh;
     display: flex;
-    
-    background-color: lightcoral;
+  
 }
 
 .avatars-chat{
-    width: 40%;
-    background-color: lightskyblue;
-    border: 1px solid black;
+    width: 35vw;
+    position: relative;
+    background-color: white;
 }
 
 .chat{
-    width: 60%;
+    width: 45vw;
     background-color: lightpink;
-    border: 1px solid black;
+    
 }
 
 
@@ -44,9 +54,9 @@ img{
 
 /* avatar section */
 .avatar{
-    height: 5%;
+    height: 7vh;
     display: flex;
-    border: 1px solid black;
+    border: 1px solid grey;
     background-color: lightgrey;
 }
 .avatar-user{
@@ -66,15 +76,26 @@ img{
 
 /* round image vatar */
 .img-avatar{
-    width: 30%;
+    width: 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .img-avatar img{
     border-radius: 50%;
-    width: 80%;
+    width: 5vh;
     line-height: 2rem;
+}
+
+.img-avatar i{
+    border-radius: 50%;
+    width: 5vh;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+
+    background-color: white;
+    color: #8edafc;
 }
 /* avatar text */
 .avatar-name{
@@ -84,34 +105,61 @@ img{
 }
 
 
-.io{
-    background-color: grey;
+/* icons */
+.avatar-icons{
+    padding: 1rem;
+}
+.avatar-icons i{
+    padding: 1rem;
 }
 
+
+/* color */
+
+.io{
+   background-color: #eaeaea;
+}
+
+.white{
+    background-color: white;
+}
+
+.notification{
+    background-color: #8edafc;
+}
 
 .avatars-container{
     overflow: auto;
 }
 
-/* input bar */
+/* input bar left*/
 .search-contact-bar{
-    height: 3rem;
-    display: flex;
-    border: 1px solid black;
+    height: 4vh;      
+    justify-content: center;;
    ;
 }
 
-/* avatar class  right side*/
+.search-contact-bar button{
+    width: 5vw;
+    height: 3vh;
+    background-color: white;
 
-.current-avatar{
-
-
-    background-color: red;
+}
+.search-contact-bar input{
+    width: 25vw;
+    height: 3vh;
+    
 }
 
+/* avatar class  right side*/
+/* avatar selcted */
+
+
+
+/* chat */
 .avatar-chat{
     width: 100%;
-    height: 90%;
+    height: 78vh;
     overflow: auto;
     background-image: url(../img/mine.jpg);
     background-size: contain;
@@ -119,11 +167,37 @@ img{
 
     background-color: green;
 }
+
+
+/* bottom text */
 .message-board{
     width: 100%;
-    height: 5%;
-    
-
+    height: 5vh;
+    display: flex;
+    align-items: center;
 
     background-color:blue;
 }
+
+.emoji,
+.audio{
+    width: 5vw;
+}
+
+
+.write-text{
+    width: 45vw;
+}
+.write-text input{
+    width: 100%;
+    line-height: 3vh;
+}
+
+.emoji,
+.audio,
+.write-text{
+    display: flex;
+    justify-content: center;
+    
+}
+
