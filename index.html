@@ -96,21 +96,18 @@
                 <!-- middle side -->
                 <div class="avatar-chat">
                     <div class="messages">
-
-                        <div v-for="(message,index) in contacts[currentUser].messages" 
-                             class="text ">
-                            <span 
-                                v-if="contacts[currentUser].messages[index++].status ==='received'"
-                                class="text-white">{{contacts[currentUser].messages[index++].message}}
-                            </span>
-
-                            <span  v-else="contacts[currentUser].messages[index++].status ==='sent'"
-                                class=" text-green">
-                            </span>
+                        <div v-for="(message,index) in contacts[currentUser].messages" class="message">
+                            <div   v-if="contacts[currentUser].messages[index].status === 'received'"  class="text " >
+                                <span class="text-white">
+                                     {{contacts[currentUser].messages[index].message}}
+                                </span>
+                            </div>
+                            <div  v-else="contacts[currentUser].messages.status === 'sent'" :class="'end'" class="text ">
+                                <span class="text-green">
+                                    {{contacts[currentUser].messages[index].message}}
+                                </span> 
+                            </div>
                         </div>
-                       
-                            
-                        
                     </div>
                 </div>
 
