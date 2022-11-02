@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- font awsome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Cdn Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     <title>vue-boolzapp</title>
 </head>
 <body>
     <div class="background-container">
         <div id="app" class="container-webapp">
+
+
+            <!-- left side -->
             <div class="avatars-chat">
-                <div class="avatar io fixed">
+                <div class="avatar io  border-right">
                     <div class="avatar-user">
                         <div class="img-avatar">
                             <img src="img/avatar_io.jpg" alt="">
@@ -47,43 +55,66 @@
                     </div>
                 </div>
                 <div class="avatars-container">
-                    <div class="avatar white">
+                    <div v-for="(contact, index) in contacts"
+                        @click="changeTopUser(index)"
+                        :class="index === currentUser"
+                        class="avatar white border-bottom">
                         <div class="img-avatar">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                         </div>
                         <div class="avatar-name">
-                            <h3>Michele</h3>
-                            <p>Ultimo messaggio inviato</p>
+                            <h2>{{contact.name}}</h2>
+                            <p>lol</p>
                         </div>  
-                    </div>
-                    
+                    </div>   
                 </div>
-                
             </div>
+
+            <!-- right side -->
+
+            <!-- top side -->
             <div class="chat">
                 <div class="current-avatar">
                     <div class="avatar io">
                         <div class="avatar-user">
                             <div class="img-avatar">
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img :src="'img/avatar' + contacts[currentUser].avatar + '.jpg'" alt="">
                             </div>
                             <div class="avatar-name">
-                                <h2>Sofia</h2>
+                                <h2>{{contacts[currentUser].name}}</h2>
                             </div>
                         </div>
                         <div class="avatar-icons">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
-
-                            
                         </div>
+                    </div>
+                </div>
+
+
+                <!-- middle side -->
+                <div class="avatar-chat">
+                    <div class="messages">
+
+                        <div v-for="(message,index) in contacts[currentUser].messages" 
+                             class="text ">
+                            <span 
+                                v-if="contacts[currentUser].messages[index++].status ==='received'"
+                                class="text-white">{{contacts[currentUser].messages[index++].message}}
+                            </span>
+
+                            <span  v-else="contacts[currentUser].messages[index++].status ==='sent'"
+                                class=" text-green">
+                            </span>
+                        </div>
+                       
+                            
                         
                     </div>
                 </div>
-                <div class="avatar-chat">
-                    
-                </div>
+
+                <!-- end side -->
                 <div class="message-board">
                     <div class="emoji">
                         <i class="fa-sharp fa-solid fa-face-smile"></i>
@@ -99,7 +130,7 @@
             
         </div>
     </div>
-    <script src="js/data.js"></script>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

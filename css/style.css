@@ -14,6 +14,20 @@ i{
     color: #b1b1b1;
 }
 
+h2{
+    font-size: 1.5rem;
+}
+
+p{
+    color: #b1b1b1;
+}
+
+.border-bottom{
+    border-bottom: 1px solid lightgray;
+}
+.border-right{
+    border-right: 1px solid lightgray;
+}
 .fixed{
     display: fixed;
     top: 0;
@@ -56,7 +70,6 @@ i{
 .avatar{
     height: 7vh;
     display: flex;
-    border: 1px solid grey;
     background-color: lightgrey;
 }
 .avatar-user{
@@ -80,6 +93,7 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
 }
 .img-avatar img{
     border-radius: 50%;
@@ -168,7 +182,37 @@ i{
     background-color: green;
 }
 
+.messages{
+    width: 80%;
+    margin: 6vw auto;
+}
 
+.text{
+    margin: 2.5rem;
+    color: black;
+    display: flex;
+    font-size: 1.5rem;
+    
+}
+
+.text-white{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    justify-content: start;
+    min-width: 15vw;
+    
+}
+
+.end{
+    justify-content: end;
+}
+.text-green{
+    background-color: #d5f9ba;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    min-width: 15vw;
+}
 /* bottom text */
 .message-board{
     width: 100%;
@@ -176,7 +220,7 @@ i{
     display: flex;
     align-items: center;
 
-    background-color:blue;
+    background-color:#f3eeea;
 }
 
 .emoji,
@@ -184,6 +228,11 @@ i{
     width: 5vw;
 }
 
+.emoji,
+.audio i{
+    color: #6b7376;
+    background-color: #f3eeea;
+}
 
 .write-text{
     width: 45vw;
