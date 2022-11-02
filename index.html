@@ -117,7 +117,12 @@
                         <i class="fa-sharp fa-solid fa-face-smile"></i>
                     </div>
                     <div class="write-text">
-                        <input type="text">
+                        <label for="message-text"></label>
+                        <input
+                          type="text"
+                          id="message-text"
+                          placeholder="Inserisci un nuovo messaggio"
+                          @keyup.enter="addNewMessage">
                     </div>
                     <div class="audio">
                         <i class="fa-solid fa-microphone"></i>

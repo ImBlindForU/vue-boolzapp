@@ -21,7 +21,7 @@ createApp({
     data(){
         return{
             currentUser: 0,
-            
+            newMessage: "",
             currentMessage:0,
             contacts: [
                 {
@@ -196,6 +196,16 @@ createApp({
             // fai diventare userChanged uguale allo user cliccato
             this.currentUser = clickedUser
 
+        },
+        addNewMessage(){
+            if(this.newMessage){
+                this.contacts[this.currentUser].messages.push(
+                    {
+                    message: this.newMessage,
+                    status: 'sent'
+                    }  
+                )
+            }
         }
     }
 }).mount("#app")
