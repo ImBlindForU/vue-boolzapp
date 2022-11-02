@@ -205,6 +205,7 @@ createApp({
                     status: 'sent'
                     }  
                 )
+                this.newMessage=""
             }
         }
     }
