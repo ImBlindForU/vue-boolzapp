@@ -1,0 +1,129 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+/* container */
+
+.background-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-webapp{
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    
+    background-color: lightcoral;
+}
+
+.avatars-chat{
+    width: 40%;
+    background-color: lightskyblue;
+    border: 1px solid black;
+}
+
+.chat{
+    width: 60%;
+    background-color: lightpink;
+    border: 1px solid black;
+}
+
+
+/* avatar class  left side*/
+
+/* avatar section */
+.avatar{
+    height: 5%;
+    display: flex;
+    border: 1px solid black;
+    background-color: lightgrey;
+}
+.avatar-user{
+    display: flex;
+    width: 50%;
+}
+.avatar-icons{
+    display: flex;
+    width: 50%;
+    justify-content: end;
+    align-items: center;
+}
+
+.avatar-icons i{
+    padding: 0.5rem;
+}
+
+/* round image vatar */
+.img-avatar{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-avatar img{
+    border-radius: 50%;
+    width: 80%;
+    line-height: 2rem;
+}
+/* avatar text */
+.avatar-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.io{
+    background-color: grey;
+}
+
+
+.avatars-container{
+    overflow: auto;
+}
+
+/* input bar */
+.search-contact-bar{
+    height: 3rem;
+    display: flex;
+    border: 1px solid black;
+   ;
+}
+
+/* avatar class  right side*/
+
+.current-avatar{
+
+
+    background-color: red;
+}
+
+.avatar-chat{
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+    background-position: center;
+
+    background-color: green;
+}
+.message-board{
+    width: 100%;
+    height: 5%;
+    
+
+
+    background-color:blue;
+}
