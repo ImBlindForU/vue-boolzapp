@@ -119,7 +119,7 @@
                     <div class="write-text">
                         <label for="message-text"></label>
                         <input
-                          type="text"
+                          v-model="newMessage"
                           id="message-text"
                           placeholder="Inserisci un nuovo messaggio"
                           @keyup.enter="addNewMessage">

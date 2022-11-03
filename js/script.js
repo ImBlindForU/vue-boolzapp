@@ -198,6 +198,8 @@ createApp({
 
         },
         addNewMessage(){
+
+            // prendi il messaggio dell input e mettilo in new message poi pushalo in messagess
             if(this.newMessage){
                 this.contacts[this.currentUser].messages.push(
                     {
