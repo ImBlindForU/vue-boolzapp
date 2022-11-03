@@ -50,8 +50,11 @@
                 <div class="search-contact-bar ">
                     <div class="input-bar">
                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        
-                        <input type="text">
+                        <label for="contact-search"></label>
+                        <input v-model="avatarSerch"
+                            id="contact-search"
+                            placeholder="Cerca utente"
+                            @keyup.enter="serchAvatar">
                     </div>
                 </div>
                 <div class="avatars-container">
