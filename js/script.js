@@ -207,7 +207,15 @@ createApp({
                     status: 'sent'
                     }  
                 )
+                setTimeout(() =>
+                { this.contacts[this.currentUser].messages.push(
+                    {
+                        message: "ok",
+                        status: 'received'
+                    } )
+                },1000)
                 this.newMessage=""
+
             }
         }
     }
