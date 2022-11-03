@@ -232,7 +232,7 @@ createApp({
         searchAvatar(){
             this.contacts.forEach(contact => {
                 if(contact.name !== this.avatarSerch){
-                    return hide 
+                    return this.hide 
                 }
             });
         }
