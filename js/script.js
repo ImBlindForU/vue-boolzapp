@@ -229,14 +229,7 @@ createApp({
         },
 
         searchAvatar(){
-            if(this.avatarSerch.includes.contacts.name){
-                this.contacts.visible = true
-                
-            } else{
-                this.contacts.visible = false
-
-            }
-            console.log(visible)
+            return this.contacts.filter(contacts.name === avatarSerch)
         }
     }
 }).mount("#app") 
