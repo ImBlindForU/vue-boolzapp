@@ -72,6 +72,13 @@ p{
     display: flex;
     background-color: lightgrey;
 }
+
+.avatar:hover{
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+
+}
 .avatar-user{
     display: flex;
     width: 50%;
