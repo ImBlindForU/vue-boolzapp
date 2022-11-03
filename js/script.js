@@ -12,6 +12,14 @@
 // “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 // ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
 // un “ok” come risposta, che apparirà dopo 1 secondo
+// Milestone 4
+// ● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+// contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
+// “mar” rimangono solo Marco e Martina)
+// Milestone 5 - opzionale
+// ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
+// permette di cancellare il messaggio selezionato
+// ● Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
 
 
 const {createApp} = Vue;
@@ -21,6 +29,7 @@ createApp({
     data(){
         return{
             currentUser: 0,
+            avatarSerch:"",
             newMessage: "",
             currentMessage:0,
             contacts: [
@@ -217,6 +226,17 @@ createApp({
                 this.newMessage=""
 
             }
+        },
+
+        searchAvatar(){
+            if(this.avatarSerch.includes.contacts.name){
+                this.contacts.visible = true
+                
+            } else{
+                this.contacts.visible = false
+
+            }
+            console.log(visible)
         }
     }
-}).mount("#app")
+}).mount("#app") 
