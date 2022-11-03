@@ -22,8 +22,8 @@ p{
     color: #b1b1b1;
 }
 
-.hidden{
-    visibility: hidden;
+.hide{
+    display: none;
 }
 
 .border-bottom{
