@@ -22,6 +22,10 @@ p{
     color: #b1b1b1;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
 .border-bottom{
     border-bottom: 1px solid lightgray;
 }

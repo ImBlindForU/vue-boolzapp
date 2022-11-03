@@ -32,6 +32,7 @@ createApp({
             avatarSerch:"",
             newMessage: "",
             currentMessage:0,
+            hide: 'hidden',
             contacts: [
                 {
                     name: 'Michele',
@@ -229,9 +230,11 @@ createApp({
         },
 
         searchAvatar(){
-            let result = this.contacts.filter( contacts => contacts.name === this.avatarSerch );
-            return result
-            
+            this.contacts.forEach(contact => {
+                if(contact.name !== this.avatarSerch){
+                    return hide 
+                }
+            });
         }
     }
-}).mount("#app")    
+}).mount("#app")
