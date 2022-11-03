@@ -229,7 +229,9 @@ createApp({
         },
 
         searchAvatar(){
-            return this.contacts.filter(contacts.name === avatarSerch)
+            let result = this.contacts.filter( contacts => contacts.name === this.avatarSerch );
+            return result
+            
         }
     }
-}).mount("#app") 
+}).mount("#app")    
