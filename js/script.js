@@ -229,10 +229,14 @@ createApp({
         },
 
         searchAvatar(){
+            let avatarSerch = this.avatarSerch
+
+
             this.contacts.forEach(contact => {
-                if(contact.name !== this.avatarSerch){
+                if(contact.name.toLowerCase().includes(avatarSerch.toLowerCase())){
+                    contact.visible = true;
+                } else{
                     contact.visible = false
-                    
                 }
             });
         }

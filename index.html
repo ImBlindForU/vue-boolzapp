@@ -60,8 +60,8 @@
                 <div class="avatars-container">
                     <div v-for="(contact, index) in contacts"
                         @click="changeTopUser(index)"
-                        :class="visible === false ? 'hide' : ''"
-                        class="avatar white border-bottom">
+                        :class="(index === contactActive) ? 'contact active' : 'contact'"
+                        v-show="contact.visible">
                         <div class="img-avatar">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                         </div>
