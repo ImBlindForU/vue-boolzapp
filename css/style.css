@@ -170,6 +170,8 @@ ul{
 }
 
 
+
+
 /* icons */
 .avatar-icons{
     padding: 1rem;
@@ -204,16 +206,21 @@ ul{
    ;
 }
 
-.search-contact-bar button{
-    width: 5vw;
-    height: 3vh;
-    background-color: white;
 
-}
 .search-contact-bar input{
-    width: 25vw;
+    width: 100%;
     height: 3vh;
     
+}
+
+.search{
+    border: 1px solid grey;    
+    width:  5vw;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
 }
 
 /* avatar class  right side*/
@@ -277,13 +284,13 @@ ul{
     width: 8vw;
 
     padding: 1rem;
-    background-color: red;
+    background-color: white;
     color: black;
     z-index: 999;
     
 }
 .square li:hover{
-    background-color: green;
+    background-color: grey;
 }
 /* bottom text */
 .message-board{
