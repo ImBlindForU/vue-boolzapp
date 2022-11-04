@@ -131,7 +131,7 @@
                                         <ul :class="{ active: isActive && index === currentList } "
                                             class="hide square">
                                             <li>Message info</li>
-                                            <li>Delete message</li>
+                                            <li @click="removeMessage(index)">Delete message</li>
                                         </ul>
                                         <small>
                                             {{contacts[currentUser].messages[index].date}}

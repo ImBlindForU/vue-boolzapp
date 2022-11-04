@@ -260,7 +260,7 @@ createApp({
 
         // delate messsage
         removeMessage(messageIndex){
-            this.contacts.messages.splice(messageIndex, 1)
+            this.contacts[this.currentUser].messages.splice(messageIndex, 1)
             
         }
     }
