@@ -107,20 +107,18 @@
                                         {{contacts[currentUser].messages[index].message}}
                                     </span>
                                     <span class="delete flex-collumn bg-color relative"
-                                            @click="activeList(clickedList)">
+                                            @click="activeList(index)">
                                         <i class="fa-solid fa-angle-down"></i>
                                         <ul :class="{ active: isActive }"
                                             class="hide square">
                                             <li>Message info</li>
-                                            <li>Delete message</li>
+                                            <li @click="removeMessage(index)">Delete message</li>
                                         </ul>
                                         <small>
                                             {{contacts[currentUser].messages[index].date}}
                                         </small>
                                     </span>
-                                     
                                 </span>
-                                
                             </div>
                             <div  v-else="contacts[currentUser].messages.status === 'sent'" :class="'end'" class="text ">
                                 <span class="text-green flex">
@@ -128,9 +126,9 @@
                                         {{contacts[currentUser].messages[index].message}}
                                     </span>
                                     <span class="delete flex-collumn bg-color relative"
-                                            @click="isActive = !isActive">
+                                            @click="activeList(index)">
                                         <i class="fa-solid fa-angle-down"></i>
-                                        <ul :class="{ active: isActive }"
+                                        <ul :class="{ active: isActive, index === currentList }"
                                             class="hide square">
                                             <li>Message info</li>
                                             <li>Delete message</li>

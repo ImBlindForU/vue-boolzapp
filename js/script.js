@@ -243,13 +243,13 @@ createApp({
                 }
             });
         },
+
+        // lista 
         activeList(clickedList){
             this.currentList = clickedList;
-            console.log(this.currentList)
-            
+            console.log(this.currentList);
+            this.isActive = true;
         },
-
-
         // generazione data e tempo
         generateDateTime() {
             return dt
@@ -257,5 +257,10 @@ createApp({
               .setLocale("it")
               .toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
           },
+
+        // delate messsage
+        removeMessage(messageIndex){
+            this.contacts.messages.splice(messageIndex, 1)
+        }
     }
 }).mount("#app")
