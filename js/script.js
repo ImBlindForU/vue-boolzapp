@@ -23,7 +23,7 @@
 
 
 const {createApp} = Vue;
-
+const dt = luxon.DateTime;
 
 createApp({
     data(){
@@ -213,7 +213,7 @@ createApp({
             if(this.newMessage){
                 this.contacts[this.currentUser].messages.push(
                     {
-                        date: "",
+                        date: this.generateDateTime(),
                         message: this.newMessage,
                         status: 'sent'
                     }  
@@ -221,7 +221,7 @@ createApp({
                 setTimeout(() =>
                 { this.contacts[this.currentUser].messages.push(
                     {   
-                        date: "",
+                        date: this.generateDateTime(),
                         message: "ok",
                         status: 'received'
                     } )
@@ -245,7 +245,17 @@ createApp({
         },
         activeList(clickedList){
             this.currentList = clickedList;
+            console.log(this.currentList)
             
-        }
+        },
+
+
+        // generazione data e tempo
+        generateDateTime() {
+            return dt
+              .now()
+              .setLocale("it")
+              .toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+          },
     }
 }).mount("#app")
