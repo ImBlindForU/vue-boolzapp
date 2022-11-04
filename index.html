@@ -106,7 +106,7 @@
                                         {{contacts[currentUser].messages[index].message}}
                                     </span>
                                     <span class="delete flex-collumn bg-color relative"
-                                            @click="isActive = !isActive">
+                                            @click="activeList(clickedList)">
                                         <i class="fa-solid fa-angle-down"></i>
                                         <ul :class="{ active: isActive }"
                                             class="hide square">

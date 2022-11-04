@@ -32,7 +32,7 @@ createApp({
             currentUser: 0,
             avatarSerch:"",
             newMessage: "",
-            currentMessage:0,
+            currentList:0,
             contacts: [
                 {
                     name: 'Michele',
@@ -242,6 +242,10 @@ createApp({
                     contact.visible = false
                 }
             });
+        },
+        activeList(clickedList){
+            this.currentList = clickedList;
+            
         }
     }
 }).mount("#app")
