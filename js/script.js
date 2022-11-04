@@ -261,6 +261,7 @@ createApp({
         // delate messsage
         removeMessage(messageIndex){
             this.contacts.messages.splice(messageIndex, 1)
+            
         }
     }
 }).mount("#app")
