@@ -23,6 +23,34 @@ p{
 }
 
 
+ul li {
+    list-style: none;
+  
+}
+
+ul{
+    position: absolute;
+    top: 2vh;
+    right: .5vw;
+}
+
+
+.relative{
+    position: relative;
+}
+.bg-color{
+    color: #b1b1b1;
+}
+
+.flex-collumn{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+
+.flex{
+    display: flex;
+}
 
 .contact{
     height: 7vh;
@@ -33,6 +61,9 @@ p{
 }
 .hide{
     display: none;
+}
+.active{
+    display: block;
 }
 
 .border-bottom{
@@ -208,7 +239,7 @@ p{
 }   
 .message{
     
-    margin: 3vh auto;
+    margin: 0 auto;
 }
 
 .text{
@@ -224,7 +255,7 @@ p{
     padding: 1rem;
     border-radius: 0.7rem;
     justify-content: start;
-    min-width: 15vw;
+    min-width: 5vw;
     
 }
 
@@ -235,7 +266,24 @@ p{
     background-color: #d5f9ba;
     padding: 1rem;
     border-radius: 0.7rem;
-    min-width: 15vw;
+    min-width: 5vw;
+}
+
+.square{
+    box-shadow: 1px 1px 1px 1px grey;
+}
+
+.square li{
+    width: 8vw;
+
+    padding: 1rem;
+    background-color: red;
+    color: black;
+    z-index: 999;
+    
+}
+.square li:hover{
+    background-color: green;
 }
 /* bottom text */
 .message-board{

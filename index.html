@@ -101,13 +101,43 @@
                     <div class="messages">
                         <div v-for="(message,index) in contacts[currentUser].messages" class="message">
                             <div   v-if="contacts[currentUser].messages[index].status === 'received'"  class="text " >
-                                <span class="text-white">
-                                     {{contacts[currentUser].messages[index].message}}
+                                <span class="text-white flex">
+                                    <span class="message">
+                                        {{contacts[currentUser].messages[index].message}}
+                                    </span>
+                                    <span class="delete flex-collumn bg-color relative"
+                                            @click="isActive = !isActive">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                        <ul :class="{ active: isActive }"
+                                            class="hide square">
+                                            <li>Message info</li>
+                                            <li>Delete message</li>
+                                        </ul>
+                                        <small>
+                                            {{contacts[currentUser].messages[index].date}}
+                                        </small>
+                                    </span>
+                                     
                                 </span>
+                                
                             </div>
                             <div  v-else="contacts[currentUser].messages.status === 'sent'" :class="'end'" class="text ">
-                                <span class="text-green">
-                                    {{contacts[currentUser].messages[index].message}}
+                                <span class="text-green flex">
+                                    <span class="message">
+                                        {{contacts[currentUser].messages[index].message}}
+                                    </span>
+                                    <span class="delete flex-collumn bg-color relative"
+                                            @click="isActive = !isActive">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                        <ul :class="{ active: isActive }"
+                                            class="hide square">
+                                            <li>Message info</li>
+                                            <li>Delete message</li>
+                                        </ul>
+                                        <small>
+                                            {{contacts[currentUser].messages[index].date}}
+                                        </small>
+                                    </span>
                                 </span> 
                             </div>
                         </div>

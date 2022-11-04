@@ -28,6 +28,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            isActive: false,
             currentUser: 0,
             avatarSerch:"",
             newMessage: "",
@@ -212,13 +213,15 @@ createApp({
             if(this.newMessage){
                 this.contacts[this.currentUser].messages.push(
                     {
-                    message: this.newMessage,
-                    status: 'sent'
+                        date: "",
+                        message: this.newMessage,
+                        status: 'sent'
                     }  
                 )
                 setTimeout(() =>
                 { this.contacts[this.currentUser].messages.push(
-                    {
+                    {   
+                        date: "",
                         message: "ok",
                         status: 'received'
                     } )
